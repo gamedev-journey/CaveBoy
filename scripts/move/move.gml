@@ -11,5 +11,15 @@ function move(collisionObject){
 	}
 	
 	x += horizontalSpeed;
+	
+	if (place_meeting(x, y + verticalSpeed, collisionObject))
+	{
+		while (!place_meeting(x, y + sign(verticalSpeed), collisionObject))
+		{
+			y += sign(verticalSpeed);
+		}
+		verticalSpeed = 0;
+	}	
+	
 	y += verticalSpeed;
 }

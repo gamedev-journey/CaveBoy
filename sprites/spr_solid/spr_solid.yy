@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a84ab56e-07d2-47ef-929b-05eb9e853579","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Niall of the Cave",
-    "path": "Niall of the Cave.yyp",
+    "name": "Sprites",
+    "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_solid",

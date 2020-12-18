@@ -25,10 +25,22 @@ switch (state)
 	if (!place_meeting(x, y + 1, obj_solid))
 	{
 		verticalSpeed += gravityAcceleration
+		sprite_index = spr_player_jump;
+		image_index = (verticalSpeed > 0);
+		
+		if (upRelease and verticalSpeed < -6)
+		{
+			verticalSpeed = -3;
+		}
 	}
 	else
 	{
 		verticalSpeed = 0;
+		
+		if (up)
+		{
+			verticalSpeed = jumpHeight;
+		}
 	}
 	if (horizontalSpeed != 0)
 	{
