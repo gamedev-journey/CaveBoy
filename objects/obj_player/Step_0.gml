@@ -14,7 +14,39 @@ switch (state)
 #region move state
 
 	case player.moving:
+	if (horizontalSpeed == 0)
+	{
+		sprite_index = spr_player_idle;
+	}
+	else
+	{
+		sprite_index = spr_player_walk;
+	}
+	if (!place_meeting(x, y + 1, obj_solid))
+	{
+		verticalSpeed += gravityAcceleration
+	}
+	else
+	{
+		verticalSpeed = 0;
+	}
+	if (horizontalSpeed != 0)
+	{
+		image_xscale = sign(horizontalSpeed);
+	}
+	if (right or left)
+	{
+		horizontalSpeed += (right - left) * acceleration;
+		horizontalSpeed = clamp(horizontalSpeed, -maxSpeed, maxSpeed);
+	}
+	else
+	{
+		horizontalSpeed = 0;
+		//apply_friction(acceleration);
+	}
+		
 	
+	move(obj_solid);
 	break;
 #endregion
 #region ledge grab state

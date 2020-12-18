@@ -1,11 +1,15 @@
 {
   "resources": [
+    {"id":{"name":"move","path":"scripts/move/move.yy",},"order":1,},
+    {"id":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},"order":1,},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},"order":3,},
     {"id":{"name":"spr_player_jump","path":"sprites/spr_player_jump/spr_player_jump.yy",},"order":4,},
     {"id":{"name":"spr_player_exit","path":"sprites/spr_player_exit/spr_player_exit.yy",},"order":1,},
     {"id":{"name":"spr_ledge_grab","path":"sprites/spr_ledge_grab/spr_ledge_grab.yy",},"order":0,},
+    {"id":{"name":"apply_friction","path":"scripts/apply_friction/apply_friction.yy",},"order":0,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"spr_player_walk","path":"sprites/spr_player_walk/spr_player_walk.yy",},"order":5,},
+    {"id":{"name":"spr_solid","path":"sprites/spr_solid/spr_solid.yy",},"order":15,},
     {"id":{"name":"spr_player_hurt","path":"sprites/spr_player_hurt/spr_player_hurt.yy",},"order":2,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
