@@ -64,11 +64,47 @@ switch (state)
 	}
 	
 	move(obj_solid);
+	
+	var falling = y - yprevious > 0;
+	var wasntWall = !position_meeting(x + grabWidth * image_xscale, yprevious, obj_solid);
+	var isWall = position_meeting(x + grabWidth * image_xscale, y, obj_solid);
+	
+	if (falling and wasntWall and isWall)
+	{
+		horizontalSpeed = 0;
+		verticalSpeed = 0;
+		
+		while (!place_meeting(x + image_xscale, y, obj_solid))
+		{
+			x += image_xscale;
+		}
+		
+		while (position_meeting(x + grabWidth * image_xscale, y - 1, obj_solid))
+		{
+			y -= 1;
+		}
+		
+		sprite_index = spr_ledge_grab;
+		state = player.ledgeGrab;
+		
+		audio_play_sound(snd_step, 6, false);
+	}
+	
 	break;
+	
 #endregion
 #region ledge grab state
 	case player.ledgeGrab:
-	
+		if (down)
+		{
+			state = player.moving;
+		}
+		if (up)
+		{
+			state = player.moving;
+			verticalSpeed = jumpHeight;
+		}
+		
 	break;
 #endregion
 #region door state
