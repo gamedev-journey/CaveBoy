@@ -40,6 +40,7 @@ switch (state)
 		if (up)
 		{
 			verticalSpeed = jumpHeight;
+			audio_play_sound(snd_jump, 5, false);
 		}
 	}
 	if (horizontalSpeed != 0)
@@ -57,6 +58,10 @@ switch (state)
 		//apply_friction(acceleration);
 	}
 		
+	if (place_meeting(x, y + verticalSpeed + 1, obj_solid) and verticalSpeed > 0)
+	{
+		audio_play_sound(snd_step, 5, false);
+	}
 	
 	move(obj_solid);
 	break;
