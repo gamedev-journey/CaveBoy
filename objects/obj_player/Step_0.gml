@@ -123,11 +123,48 @@ switch (state)
 #endregion
 #region hurt state
 	case player.hurt:
+		sprite_index = spr_player_hurt;
+		
+		if (horizontalSpeed != 0)
+		{
+			image_xscale = sign(horizontalSpeed);
+		}
+		
+		if (!place_meeting(x, y + 1, obj_solid))
+		{
+			verticalSpeed += gravityAcceleration;
+		}
+		else
+		{
+			verticalSpeed = 0;
+			horizontalSpeed = 0;
+		}
+		direction_move_bounce(obj_solid);
+		
+		if (horizontalSpeed == 0 and verticalSpeed == 0)
+		{
+			if (obj_player_stats.hp <= 0)
+			{
+				state = player.death;
+			}
+			else
+			{
+				image_blend = c_white
+				state = player.moving;
+			}
+		}
 	
 	break;
 #endregion
 #region death state
 	case player.death:
+		with (obj_player_stats)
+		{
+			hp = maxHp;
+			sapphires = 0;
+		}
+		
+		room_restart();
 	
 	break;
 #endregion
