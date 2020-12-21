@@ -109,6 +109,15 @@ switch (state)
 #endregion
 #region door state
 	case player.door:
+	sprite_index = spr_player_exit;
+		if (image_alpha > 0)
+		{
+			image_alpha -= .05;
+		}
+		else
+		{
+			room_goto_next();
+		}
 	
 	break;
 #endregion
