@@ -35,7 +35,7 @@
     "spriteId": {"name":"spr_snake","path":"sprites/spr_snake/spr_snake.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 2.5,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

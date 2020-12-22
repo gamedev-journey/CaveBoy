@@ -29,6 +29,7 @@
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},"order":0,},
     {"id":{"name":"spr_particle","path":"sprites/spr_particle/spr_particle.yy",},"order":8,},
     {"id":{"name":"obj_entrance","path":"objects/obj_entrance/obj_entrance.yy",},"order":1,},
+    {"id":{"name":"obj_snake","path":"objects/obj_snake/obj_snake.yy",},"order":1,},
     {"id":{"name":"snd_exit","path":"sounds/snd_exit/snd_exit.yy",},"order":1,},
     {"id":{"name":"spr_sapphire","path":"sprites/spr_sapphire/spr_sapphire.yy",},"order":6,},
     {"id":{"name":"take_damage","path":"scripts/take_damage/take_damage.yy",},"order":2,},
