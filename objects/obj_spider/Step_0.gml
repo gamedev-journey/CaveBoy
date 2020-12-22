@@ -21,6 +21,31 @@ switch (state)
 	#region spider jump
 	case spider.jump:
 		image_index = image_number - 1;
+		
+		if (!place_meeting(x, y + 1, obj_solid))
+		{
+			verticalSpeed += gravity_acceleration;
+		}
+		else
+		{
+			verticalSpeed = 0;
+			horizontalSpeed = 0;
+			
+			if (horizontalSpeed == 0 and verticalSpeed == 0)
+			{
+				state = spider.idle;
+				alarm[0] = 15;
+				image_speed = 0;
+				image_index = 0;
+			}
+		}
+		
+		if (horizontalSpeed != 0)
+		{
+			image_xscale = sign(horizontalSpeed);
+		}
+		
+		move(obj_solid);
 	break;
 	#endregion
 }
