@@ -4,5 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
-audio_play_sound(snd_snake, 3, false);
+audio_play_sound(snd_bat, 3, false);
 
