@@ -1,5 +1,4 @@
 {
-  "name": "til_dirt",
   "spriteId": {
     "name": "spr_Dirt",
     "path": "sprites/spr_Dirt/spr_Dirt.yy",
@@ -141,6 +140,7 @@
     "path": "folders/Tile Sets.yy",
   },
   "resourceVersion": "1.0",
+  "name": "til_dirt",
   "tags": [],
   "resourceType": "GMTileSet",
 }
